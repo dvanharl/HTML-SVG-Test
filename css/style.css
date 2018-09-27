@@ -182,8 +182,54 @@
 	width: 13%;
 }
 
-.map-detail.table{
+.map-detail-table{
 	background-color: #4672C4;
 	border-style: solid;
 	border-color: #c8c8c8;
+	position:absolute;
+}
+
+.map-detail-table p{
+	color:white;
+	font-family:Calibri;
+	font-size:18px;
+	padding: 0px 100px 0px 0px;
+	margin-top:4px;
+	margin-bottom:4px;
+}
+
+.map-detail-table.red1{
+	left:40%;
+	top:20%;
+}
+
+.map-detail-table.red2{
+	left:40%;
+	top:60%;
+}
+
+.map-detail-table.red3{
+	left:60%;
+	top:20%;
+}
+
+.map-detail-table.red4{
+	left:60%;
+	top:50%;
+}
+
+
+.map-detail-table.green1{
+	left:80%;
+	top:40%;
+}
+
+.map-detail-table.blue1{
+	left:45%;
+	top:45%;
+}
+
+.map-detail-table.cyan1{
+	left:20%;
+	top:50%;
 }
