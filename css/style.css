@@ -84,7 +84,6 @@
 	position:absolute;
 	visibility:visible;
 	pointer-events:fill;
-	cursor: pointer;
 }
 
 .map-main.red{
