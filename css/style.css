@@ -27,6 +27,15 @@ svg:hover path{
 	height: 5%;
 }
 
+.back{
+	width: 86.5%;
+	position: absolute;
+	z-index: -49;
+	top: 0%;
+	right:0%;
+	height: 5%;
+}
+
 .back-button{
 	position: absolute;
 	float: right;
@@ -70,7 +79,7 @@ svg:hover path{
 	display: block;
 }
 
-.menu:hover .menu-button{
+.menu-button:hover{
 	background-color: #4672C4;
 	
 }
@@ -192,15 +201,17 @@ svg:hover path{
 	border-style: solid;
 	border-color: #c8c8c8;
 	position:absolute;
+	display:block;
 }
 
-.map-detail-table p{
+.map-detail-table a{
 	color:white;
 	font-family:Calibri;
 	font-size:18px;
 	padding: 0px 100px 0px 0px;
 	margin-top:4px;
 	margin-bottom:4px;
+	float:left;
 }
 
 .map-detail-table.red1{
@@ -213,7 +224,7 @@ svg:hover path{
 	top:60%;
 }
 
-.map-detail-table.red3{
+.map-detail-table.red{
 	left:60%;
 	top:20%;
 }
@@ -224,17 +235,32 @@ svg:hover path{
 }
 
 
-.map-detail-table.green1{
+.map-detail-table.green{
 	left:80%;
 	top:40%;
 }
 
-.map-detail-table.blue1{
+.map-detail-table.blue{
 	left:45%;
 	top:45%;
 }
 
-.map-detail-table.cyan1{
+.map-detail-table.cyan{
 	left:20%;
 	top:50%;
+}
+
+.map-detail-table.pink{
+	left:20%;
+	top:50%;
+}
+
+/*STAGE 2 PAGES*/
+iframe{
+	position:absolute;
+	width: 100%;
+	height: 1080px;
+	padding: 0px 0px;
+	z-index: -30;
+	padding-top: 56.25%;
 }
