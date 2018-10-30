@@ -219,6 +219,11 @@ svg:hover path{
 	top:20%;
 }
 
+.map-detail-table.yellow{
+	left:40%;
+	top:20%;
+}
+
 .map-detail-table.red2{
 	left:40%;
 	top:60%;
@@ -262,5 +267,6 @@ iframe{
 	height: 1080px;
 	padding: 0px 0px;
 	z-index: -30;
-	padding-top: 56.25%;
+	top:0%;
+	left:0%;
 }

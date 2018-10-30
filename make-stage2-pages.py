@@ -25,9 +25,9 @@ for color in data:
 		pageName = data[color][pageNum]["PageName"]
 		buildName = data[color][pageNum]["BuildingName"]
 		ip = data[color][pageNum]["IP"]
-		username = ""
-		password = ""
-		ipAddress = "http://" + username + ":" + password + "@" + ip + ":80/scada-vis"
+		username = data[color][pageNum]["Username"]
+		password = data[color][pageNum]["Password"]
+		url = "http://" + username + ":" + password + "@" + ip + ":80/scada-vis"
 		
 		#MakePage
 		filename = filepath + pageNum + ".html"
@@ -35,13 +35,15 @@ for color in data:
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>""" + pageName + """</title>
+		<title>""" + url + """</title>
 		<link rel="stylesheet" href="../../css/style.css">
 	</head>
 	
 	<body>
 		<div class="bg">
-			<iframe src=""" + ipAddress + """></iframe>
+			<iframe src=""" + "../red.html" + """>
+				
+			</iframe>
 			<div class="menu">
 				<img class="menu-button" src="../../svg/SVG-Button-002.svg">
 				<div class="menu-options">

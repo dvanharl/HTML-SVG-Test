@@ -328,11 +328,9 @@ numContainer = document.getElementsByClassName("map-detail-table").length;
 for (i=0;i<pageList.length;i++){
 	pageNum = String(pageList[i]);
 	var linkName = jsonData[color][pageNum].BuildingName;
-	console.log(linkName);
 	var localUrl = "building-nodes/" + pageNum + ".html";
 	//Finding the container
 	container = document.getElementById(color);
-	console.log(container);
 	addLink(container,linkName,localUrl);
 }
 
