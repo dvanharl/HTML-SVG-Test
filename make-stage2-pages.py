@@ -27,7 +27,11 @@ for color in data:
 		ip = data[color][pageNum]["IP"]
 		username = data[color][pageNum]["Username"]
 		password = data[color][pageNum]["Password"]
-		url = "http://" + username + ":" + password + "@" + ip + ":80/scada-vis"
+		port = ":80"
+		if ip:
+			url = "http://" + ip
+		else:
+			url = pageName
 		
 		#MakePage
 		filename = filepath + pageNum + ".html"
@@ -35,15 +39,32 @@ for color in data:
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>""" + url + """</title>
+		<title>""" + pageName + """</title>
 		<link rel="stylesheet" href="../../css/style.css">
 	</head>
 	
 	<body>
 		<div class="bg">
-			<iframe src=""" + "../red.html" + """>
+			<iframe></iframe>
+			<script>
+				var url = """ + url + """;
+				var username = """ + username + """;
+				var password = """ + password + """;
+				var  isChrome = !!window.chrome && !isOpera;
+				var iframes = document.getElementsByTagName('iframe');
+				var iframe = iframes.item(0);
+				var iframePage= iframe.contentWindow.document;
 				
-			</iframe>
+				function loadIFrame(){
+					var request = new XMLHttpRequest();
+					req.open("POST", this.iframeURL, false,""" + username + """, """ + password + """);
+					req.send(null);
+					
+					iframe.src = this.iframeURL + "?extraParameters=true";
+				}
+				
+				loadIFrame();
+			</script>
 			<div class="menu">
 				<img class="menu-button" src="../../svg/SVG-Button-002.svg">
 				<div class="menu-options">

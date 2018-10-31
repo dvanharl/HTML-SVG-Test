@@ -25,7 +25,7 @@ svg:hover{
 	background-size: cover;
 	width: 100%;
 	position: absolute;
-	z-index: -49;
+	z-index: -29;
 	top: 0%;
 	height: 5%;
 }
@@ -218,12 +218,32 @@ svg:hover{
 	float:left;
 }
 
-.map-detail-table.red1{
+#Red1,#Green1,#Blue1,#Yellow1,#Pink1,#Teal1{
+	left:20%;
+	top:20%;
+}
+
+#Red2,#Green2,#Blue2,#Yellow2,#Pink2,#Teal2{
+	left:80%;
+	top:20%;
+}
+
+#Red3,#Green3,#Blue3,#Yellow3,#Pink3,#Teal3{
+	left:20%;
+	top:60%;
+}
+
+#Red4,#Green4,#Blue4,#Yellow4,#Pink4,#Teal4{
+	left:80%;
+	top:60%;
+}
+
+/*.map-detail-table.yellow{
 	left:40%;
 	top:20%;
 }
 
-.map-detail-table.yellow{
+.map-detail-table.yellow2{
 	left:40%;
 	top:20%;
 }
@@ -262,7 +282,7 @@ svg:hover{
 .map-detail-table.pink{
 	left:20%;
 	top:50%;
-}
+}*/
 
 /*STAGE 2 PAGES*/
 iframe{

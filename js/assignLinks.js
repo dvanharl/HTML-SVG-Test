@@ -320,9 +320,19 @@ var jsonData = {
 var pageList = Object.keys(jsonData[color]);
 
 //Find number of blocks in color page
-numContainer = document.getElementsByClassName("map-detail-table").length;
+var numContainer = document.getElementsByClassName("map-detail-table").length;
 
 //Divide stage 2 pages along those blocks
+var partitions = {
+	"Red":[1,2],
+	"Green":[4,3],
+	"Blue":[4,4],
+	"Yellow":[12,12],
+	"Pink":[1,0],
+	"Teal":[1,0]
+}
+
+var index = 1;
 
 //Apply links to each block in page
 for (i=0;i<pageList.length;i++){
@@ -330,8 +340,24 @@ for (i=0;i<pageList.length;i++){
 	var linkName = jsonData[color][pageNum].BuildingName;
 	var localUrl = "building-nodes/" + pageNum + ".html";
 	//Finding the container
-	container = document.getElementById(color);
+	container = document.getElementById(color + index);
+	console.log(container);
 	addLink(container,linkName,localUrl);
+	partitions[color][index-1] -= 1;
+	if(partitions[color][index-1] == 0){
+		index += 1;
+		if(index == 3){
+			break;
+		}
+	}
+}
+
+//Clean up and hide other blocks
+for(i=1;i<5;i++){
+	container = document.getElementById(color+i);
+	if(container.is(':empty') ) {
+		container.style.display = "none";
+	}
 }
 
 function addLink(container,title,src){

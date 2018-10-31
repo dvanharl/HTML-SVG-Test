@@ -2,15 +2,32 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>http://:@192.168.1.177:80/scada-vis</title>
+		<title>N057</title>
 		<link rel="stylesheet" href="../../css/style.css">
 	</head>
 	
 	<body>
 		<div class="bg">
-			<iframe src=../red.html>
+			<iframe></iframe>
+			<script>
+				var url = http://192.168.1.177;
+				var username = ;
+				var password = ;
+				var  isChrome = !!window.chrome && !isOpera;
+				var iframes = document.getElementsByTagName('iframe');
+				var iframe = iframes.item(0);
+				var iframePage= iframe.contentWindow.document;
 				
-			</iframe>
+				function loadIFrame(){
+					var request = new XMLHttpRequest();
+					req.open("POST", this.iframeURL, false,, );
+					req.send(null);
+					
+					iframe.src = this.iframeURL + "?extraParameters=true";
+				}
+				
+				loadIFrame();
+			</script>
 			<div class="menu">
 				<img class="menu-button" src="../../svg/SVG-Button-002.svg">
 				<div class="menu-options">
