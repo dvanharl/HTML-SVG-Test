@@ -306,7 +306,7 @@ var jsonData = {
 			"Password": ""
 		}
 	},
-	"Cyan":{
+	"Teal":{
 		"48":{
 			"PageName":"N330",
 			"BuildingName": "Building 219",
@@ -324,18 +324,21 @@ var numContainer = document.getElementsByClassName("map-detail-table").length;
 
 //Divide stage 2 pages along those blocks
 var partitions = {
-	"Red":[1,2],
-	"Green":[4,3],
-	"Blue":[4,4],
-	"Yellow":[12,12],
-	"Pink":[1,0],
-	"Teal":[1,0]
+	"Red":[1,2,0,0],
+	"Green":[4,3,0,0],
+	"Blue":[4,4,0,0],
+	"Yellow":[6,6,6,6],
+	"Pink":[1,0,0,0],
+	"Teal":[1,0,0,0]
 }
 
 var index = 1;
 
 //Apply links to each block in page
 for (i=0;i<pageList.length;i++){
+	if(index == 5){
+		break;
+	}
 	pageNum = String(pageList[i]);
 	var linkName = jsonData[color][pageNum].BuildingName;
 	var localUrl = "building-nodes/" + pageNum + ".html";
@@ -346,9 +349,7 @@ for (i=0;i<pageList.length;i++){
 	partitions[color][index-1] -= 1;
 	if(partitions[color][index-1] == 0){
 		index += 1;
-		if(index == 3){
-			break;
-		}
+		
 	}
 }
 

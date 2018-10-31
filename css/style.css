@@ -29,11 +29,17 @@ svg:hover{
 	top: 0%;
 	height: 5%;
 }
+.menu2{
+	position: absolute;
+	z-index: -29;
+	top: 0%;
+	height: 100%;
+}
 
 .back{
 	width: 86.5%;
 	position: absolute;
-	z-index: -49;
+	z-index: -29;
 	top: 0%;
 	right:0%;
 	height: 5%;
@@ -61,7 +67,7 @@ svg:hover{
     background-color: #4672C4;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-	width:13.5%;
+	width:100%;
 	top:100%;
 }
 
@@ -74,12 +80,11 @@ svg:hover{
 }
 
 .menu-options a:hover{
-	background-color: #4672C4;
-	
-	
+	background-color: #4672D4;
+	color:Yellow;
 }
 
-.menu:hover .menu-options{
+.menu2:hover .menu-options{
 	display: block;
 }
 
@@ -206,12 +211,14 @@ svg:hover{
 	border-color: #c8c8c8;
 	position:absolute;
 	display:block;
+	max-height:30%;
+	min-height:10%;
 }
 
 .map-detail-table a{
 	color:white;
 	font-family:Calibri;
-	font-size:18px;
+	font-size:100%;
 	padding: 0px 100px 0px 0px;
 	margin-top:4px;
 	margin-bottom:4px;
@@ -219,17 +226,17 @@ svg:hover{
 }
 
 #Red1,#Green1,#Blue1,#Yellow1,#Pink1,#Teal1{
-	left:20%;
-	top:20%;
+	left:10%;
+	top:10%;
 }
 
 #Red2,#Green2,#Blue2,#Yellow2,#Pink2,#Teal2{
 	left:80%;
-	top:20%;
+	top:10%;
 }
 
 #Red3,#Green3,#Blue3,#Yellow3,#Pink3,#Teal3{
-	left:20%;
+	left:10%;
 	top:60%;
 }
 
@@ -283,6 +290,10 @@ svg:hover{
 	left:20%;
 	top:50%;
 }*/
+
+.map-detail-table:empty {
+  display:none;
+}
 
 /*STAGE 2 PAGES*/
 iframe{
