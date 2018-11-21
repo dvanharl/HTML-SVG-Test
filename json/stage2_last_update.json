@@ -1,9 +1,4 @@
-(function(){
-//Get title of html for color
-color = document.title;
-//Get links of respective color in JSON
-var jsonData = JSON.parse(data);
-/*var jsonData = {
+{
 	"Yellow":{
 		"25":{
 			"PageName":"N050",
@@ -317,61 +312,4 @@ var jsonData = JSON.parse(data);
 			"Password": ""
 		}
 	}
-};
-*/
-//var jsonData = JSON.parse(jsonText);
-var pageList = Object.keys(jsonData[color]);
-
-//Find number of blocks in color page
-var numContainer = document.getElementsByClassName("map-detail-table").length;
-
-//Divide stage 2 pages along those blocks
-var partitions = {
-	"Red":[1,2,0,0],
-	"Green":[4,3,0,0],
-	"Blue":[4,4,0,0],
-	"Yellow":[6,6,6,6],
-	"Pink":[1,0,0,0],
-	"Teal":[1,0,0,0]
 }
-
-var index = 1;
-
-//Apply links to each block in page
-for (i=0;i<pageList.length;i++){
-	if(index == 5){
-		break;
-	}
-	pageNum = String(pageList[i]);
-	var linkName = jsonData[color][pageNum].BuildingName;
-	var localUrl = "building-nodes/" + pageNum + ".html";
-	//Finding the container
-	container = document.getElementById(color + index);
-	console.log(container);
-	addLink(container,linkName,localUrl);
-	partitions[color][index-1] -= 1;
-	if(partitions[color][index-1] == 0){
-		index += 1;
-		
-	}
-}
-
-//Clean up and hide other blocks
-for(i=1;i<5;i++){
-	container = document.getElementById(color+i);
-	if(container.is(':empty') ) {
-		container.style.display = "none";
-	}
-}
-
-function addLink(container,title,src){
-	var a = document.createElement('a');
-	var aText = document.createTextNode(title);
-	a.appendChild(aText);
-	a.title = title;
-	a.href = src;
-	container.appendChild(a);
-	var br = document.createElement('br');
-	container.appendChild(br);
-}
-}());

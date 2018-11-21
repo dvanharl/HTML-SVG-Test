@@ -1,49 +1,34 @@
 
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>N056</title>
-		<link rel="stylesheet" href="../../css/style.css">
-	</head>
-	
-	<body>
-		<div class="bg">
-			<iframe></iframe>
-			<script>
-				var url = http://192.168.1.176;
-				var username = ;
-				var password = ;
-				var  isChrome = !!window.chrome && !isOpera;
-				var iframes = document.getElementsByTagName('iframe');
-				var iframe = iframes.item(0);
-				var iframePage= iframe.contentWindow.document;
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta name="color" content='Yellow'>
+			<meta name="pageNum" content='31'>
+			<title>N056</title>
+			<link rel="stylesheet" href="../../css/style.css">
+		</head>
+		
+		<body>
+			<div class="bg">
+				<iframe></iframe>
+				<script type="text/javascript" src="../../json/stage2_pages.json"></script>
+				<script type="text/javascript" src="../../js/login.js"></script>
+				<div class="menu">
+					<img class="menu-button" src="../../svg/SVG-Button-002.svg">
+					<div class="menu-options">
+						<a href="../red.html">Red</a>
+						<a href="../green.html">Green</a>
+						<a href="../blue.html">Blue</a>
+						<a href="../yellow.html">Yellow</a>
+						<a href="../pink.html">Pink</a>
+						<a href="../teal.html">Teal</a>
+					</div>
+				</div>
 				
-				function loadIFrame(){
-					var request = new XMLHttpRequest();
-					req.open("POST", this.iframeURL, false,, );
-					req.send(null);
-					
-					iframe.src = this.iframeURL + "?extraParameters=true";
-				}
-				
-				loadIFrame();
-			</script>
-			<div class="menu">
-				<img class="menu-button" src="../../svg/SVG-Button-002.svg">
-				<div class="menu-options">
-					<a href="../red.html">Red</a>
-					<a href="../green.html">Green</a>
-					<a href="../blue.html">Blue</a>
-					<a href="../yellow.html">Yellow</a>
-					<a href="../pink.html">Pink</a>
-					<a href="../teal.html">Teal</a>
+				<div class="back">
+					<a href="../../home.html"><img class="back-button" src="../../svg/SVG-Button-001.svg"></a>
 				</div>
 			</div>
-			
-			<div class="back">
-				<a href="../../home.html"><img class="back-button" src="../../svg/SVG-Button-001.svg"></a>
-			</div>
-		</div>
-	</body>
-	
-</html>
+		</body>
+		
+	</html>
